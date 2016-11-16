@@ -44,7 +44,7 @@
 <h1 id="gitlab"> 1.gitlab的安装</h1>
 ## 1.1环境
 
-    gitlab版本：GitLab CE Omnibus 
+    gitlab版本：GitLab CE 7.14.1
     
     操作系统：ubuntu 12.04 64bit
     
@@ -114,7 +114,7 @@ sudo apt-get install curl openssh-server ca-certificates postfix
 ### (3)添加gitlab 包服务并安装包
 输入下面的命令:
 ```
-curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 ```
 出现下面的内容仓库说明己安装好：
 
@@ -122,7 +122,7 @@ curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/scrip
 
 然后输入下面的命令安装包：
  ```
- sudo apt-get install gitlab-ce
+ sudo apt-get install gitlab-ce=7.14.1-ce.0
  ```
  
  出现下面的内容说明安装好：
@@ -143,7 +143,12 @@ sudo gitlab-ctl reconfigure
 
 ### (5)登录gitlab(访问http://localhost)
   在浏览器中输入：http://localhost 如果进入到登录页面，则说明gitlab己正确安装。
-  首次访问gitlab,会直接重定向到设置密码屏幕，初始用户名是root。
+  默认管理员的账户密码：
+
+    Username: root
+    Password: 5iveL!fe 
+    
+  登录进去后直接跳到更改密码界面
   
 <h1 id="openEdx"> 2.Open edX的安装</h1>
 ## 2.1 环境
